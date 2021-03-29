@@ -7,7 +7,8 @@
   <meta name="description" content="Taufook is a Designer who sometimes codes and writes."/>
   <link rel="icon" href="/favicon.ico">
   <link rel="shortcut icon" href="/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu|Great+Vibes" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="style.css" />
   <title>I'm Tufu</title>
   <style>
@@ -16,51 +17,63 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: black;
+    background-image: repeating-linear-gradient(0deg,black,black 12px,#060606 12px, #060606 16px);
     }
     .contain {
     text-align: center;
-    }
-    .contain h1 {
-    font-family:  'Great Vibes', cursive;
-    font-size: 56px;
-    margin-bottom: 0px;
-    font-weight: 400;
-    }
-
-    .sm-link {
-    font-family: 'Ubuntu', serif;
     display: flex;
-    list-style-type: none;
-    margin: 40px 0 0 0;
-    padding: 0;
+    flex-direction: row;
+    max-width: 540px;
+    align-items: flex-start;
+    margin: 24px;
+    opacity: 0;
+    animation: fade-in 3s ease 0s 1;
+    animation-fill-mode:forwards;
     }
-    .sm-link li {
-    padding: 0 10px;
+    .avatar {
+      padding: 4px;
+      margin-right: 32px;
     }
-    .sm-link li:nth-child(1) {
-    padding-left: 0;
+    .intro {
+      font-family: 'Roboto Mono', monospace;
+      color: white;
+      font-size: 14px;
+      text-align: left;
+      max-width: 450px;
     }
-    .sm-link li a {
-    text-decoration: none;
-    color: #444;
+    .intro p {
+      margin-top: 0;
+      margin-bottom: 18px;
     }
-    .sm-link li a:hover {
-    text-decoration: underline;
-    color: #444;
+    .intro a {
+      text-decoration: none;
+      color: #FFF6A6;
+    }
+    @keyframes fade-in{  
+    0%{ opacity: 0;}
+    100%{opacity:1;}
     }
   </style>
 </head>
 
 <body>
     <div class="contain">
-      <h1>Tufu</h1>
-      <ul class="sm-link">
-	<li><a href="https://www.zhihu.com/people/taufook" rel="me" title="Follow Tufu on Zhihu" class="bl">Zhihu</a></li>
-        <li><a href="https://github.com/tufucheung" rel="me" title="Follow Tufu on Github" class="gh">GitHub</a></li>
-        <li><a href="https://linkedin.com/in/zhilinzhang" rel="me" title="Connect with Tufu on LinkedIn" class="li">LinkedIn</a></li>
-        <li><a href="https://zed.im/" rel="me" title="Read Tufu's Blog" class="cp">Blog</a></li>
-        <li><a href="https://twitter.com/tufucheung" rel="me" title="Follow Tufu on Twitter" class="cp">Twitter</a></li>
-      </ul>
+      <div class="avatar">
+        <svg width="34" height="53" viewBox="0 0 34 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.125 2.75V0.5H33.875V2.75H0.125ZM0.125 7.25V5H33.875V7.25H0.125ZM0.125 11.75V9.5H33.875V11.75H24.875V52.25H22.625V11.75H20.375V52.25H18.125V11.75H15.875V52.25H13.625V11.75H11.375V52.25H9.125V11.75H0.125Z" fill="white"/>
+        </svg>
+      </div>
+      <div class="intro">
+        <p>Hello, I’m Tufu. 
+        </p>
+        <p>I'm a <a href="">designer</a>, <a href="">writer</a>, <a href="">tweeter</a>, and sometimes <a href="">software tinkerer</a>. I'm currently working at <a href="">Tiktok</a> as a product designer.
+        </p>
+        <p>Previously, I was playing with tons of mobile phones at <a href="">MEIZU</a>, and then thinking about online shopping experience at <a href="">SHEIN</a>.
+        <p>
+        <p>I love to build something useless:)
+        </p>
+      </div>
     </div>
 </body>
 
